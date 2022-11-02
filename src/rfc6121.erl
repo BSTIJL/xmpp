@@ -339,6 +339,23 @@ decode_roster_item_attrs(__TopXMLNS, [], Jid, Name,
      decode_roster_item_attr_ask(__TopXMLNS, Ask)}.
 
 encode_roster_item({roster_item,
+  Jid,
+  Name,
+  Groups,
+  Subscription,
+  Ask,
+  _AskMessage,
+  Mix_channel},
+    __TopXMLNS) ->
+  encode_roster_item({roster_item,
+    Jid,
+    Name,
+    Groups,
+    Subscription,
+    Ask,
+    Mix_channel},
+    __TopXMLNS);
+encode_roster_item({roster_item,
                     Jid,
                     Name,
                     Groups,
